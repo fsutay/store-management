@@ -42,7 +42,7 @@ const DataTable = () => {
       width: 110,
       editable: false,
     }, {
-      field: "action",//burası silinse daha iyi olur
+      field: "action",
       headerName: "",
       sortable: false,
       renderCell: (params) => {

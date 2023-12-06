@@ -8,7 +8,6 @@ import { DataGridPro } from '@mui/x-data-grid-pro';
 
 const DataTable = () => {
   const { storeList } = useSelector((state) => state.storesStore);
-  console.log(storeList)
   const dispatch = useDispatch();
   const [selectedRows, setSelectedRows] = useState([]);
 
@@ -70,7 +69,6 @@ const DataTable = () => {
         experimentalFeatures={{ newEditingApi: true }}
         onSelectionModelChange={itm => console.log(itm)}
         onRowSelectionModelChange={(ids) => {
-          console.log(ids);
           setSelectedRows(ids);
         }}
         disableColumnFilter

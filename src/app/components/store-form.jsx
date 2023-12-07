@@ -21,6 +21,7 @@ const formFields = [
 const StoreForm = () => {
   const dispatch = useDispatch();
   const { updatingStore, updateClicked} = useSelector((state) => state.storesStore);
+  
   const onSubmit = (values) => {
     if(updateClicked){
       dispatch(updateStore(values));
@@ -119,12 +120,12 @@ const StoreForm = () => {
 
         <div className="flex justify-center mt-4">
           <button type="submit" className="bg-primary text-white py-2 px-4 rounded w-full lg:w-60">
-            {updateClicked ? "Mağaza Güncelle" : "Mağaza Ekle"}
+            {updateClicked ? "UPDATE" : "CREATE"}
           </button>
           &nbsp;  &nbsp;
           {
             updateClicked ? <Button onClick={giveUpUpdate}  className="bg-primary text-white py-2 px-4 rounded w-full lg:w-60">
-            Vazgeç
+            GIVE UP
            </Button>:null
           }
           

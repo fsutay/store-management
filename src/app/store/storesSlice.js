@@ -29,7 +29,6 @@ const storesSlice = createSlice({
       let id = action.payload.id;
       let selectedStore = state.storeList.find((store) => store.id === id);
       state.updatingStore = selectedStore;
-      state.updatingStore.clickedDate = new Date();
       state.updateClicked = true;
     },
     deleteStores: (state, action) => {

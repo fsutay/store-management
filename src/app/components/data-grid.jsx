@@ -43,7 +43,7 @@ const DataTable = () => {
       editable: false,
     }, {
       field: "action",
-      headerName: "",
+      headerName: "Edit",
       sortable: false,
       renderCell: (params) => {
         const onClick = (e) => {
